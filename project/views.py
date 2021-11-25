@@ -13,7 +13,7 @@ def home(request):
 
     return Response(
         {
-            "api_root": api_root_url,
+            # "api_root": api_root_url,
             "docs": doc_url,
         },
         status=status.HTTP_200_OK)

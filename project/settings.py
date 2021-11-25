@@ -52,6 +52,7 @@ INSTALLED_APPS = [
 
     # local
     'account',
+    'booking',
 ]
 
 MIDDLEWARE = [
@@ -160,7 +161,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = env.str('EMAIL_HOST', 'smtp.gmail.com')
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_USER = env.str('EMAIL_HOST_USER', 'info@technoteplus.com')
+EMAIL_HOST_USER = env.str('EMAIL_HOST_USER', 'info@project.com')
 EMAIL_HOST_PASSWORD = env.str('EMAIL_HOST_PASSWORD', 'nope')
 
 # cors settings

@@ -19,7 +19,9 @@ class UserViewSet(viewsets.ModelViewSet):
         if self.action == 'create':
             self.permission_classes = (AllowAny,)
 
-        elif self.action in ('update', 'partial_update', 'destroy'):
+        else:
             self.permission_classes = (IsOwnAccount,)
-
         return super().get_permissions()
+
+    def get_queryset(self):
+        return self.queryset.filter(id=self.request.user.id)
